@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  
+  <!-- 配置org.springframework.web.filter.HiddenHttpMethodFilter：可以把post 请求转换 DELETE请求或者POST请求 -->
+  <filter>
+  	<filter-name>hiddenHttpMethodFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  		<filter-name>hiddenHttpMethodFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  </filter-mapping>
   <!-- 配置 dispatcherServlet -->
   <servlet>
   	<servlet-name>springDispatcherServlet</servlet-name>
