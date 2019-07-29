@@ -10,7 +10,7 @@ public class SpringMvcTest {
 	public final static String SUCCESS = "success";
 	
 	
-	@RequestMapping(value="/testParamsAndHeaders",params={"username","age!=10"})
+	@RequestMapping(value="/testParamsAndHeaders",params={"username","age!=10"},headers={"Accept-Language=zh-CN,zh;q=0.8"})
 	public String testParamsAndHeaders(){
 		System.out.println("testParamsAndHeaders ......");
 		return SUCCESS;
