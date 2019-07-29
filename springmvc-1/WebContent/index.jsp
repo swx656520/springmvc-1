@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href="springmvc/testParamsAndHeaders?username=zhangsan&age=10">Test ParamsAndHeaders</a>
+	<br></br>
 	<form action="springmvc/testMethod" method="post">
 	<input type="submit" value="Test Method">
 	</form>
